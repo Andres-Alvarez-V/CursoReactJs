@@ -1,0 +1,6 @@
+{
+    "presets": [
+        "@babel/preset-env",//Este preset nos va ayudar para que babel entienda ECMA5 y 6, para poder trabajar con este
+        "@babel/preset-react"//Este preset nos sirve para trabajar con JSX y React
+    ]
+}

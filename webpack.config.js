@@ -38,6 +38,17 @@ module.exports= {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(png|gif|jpg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options:{
+                            name: 'assets/[hash].[ext]'//Se van a guardar las imagenes  con el nombre de un hash respetando la extension
+                        }
+                    }
+                ]
             }
         ]
     },

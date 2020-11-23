@@ -8,6 +8,7 @@ module.exports= {
     output: {
         path: path.resolve(__dirname, 'dist'), //Requerimos path que instanciamos previamente y utilizamos el resolve que nos va a permitir identificar el directorio en el que nos encontramos y un directorio en el cual vamos a guardar nuestros archivos
         filename: 'bundle.js', //Este es el nombre que le daremos a nuestro archivo principal el cual se va a crear y que va a guardar todo lo compilado
+        publicPath: '/',
     },
     resolve: { //Este elemento nos ayudar a resolver las extensiones que vamos a utilizar en nuestro proyecto
         extensions: ['.js', '.jsx']
@@ -51,6 +52,9 @@ module.exports= {
                 ]
             }
         ]
+    },
+    devServer:{//A devServer le pasamos el history api fall back este nos sirve para poder hacer navegacion en nuestro proyecto con router.
+        historyApiFallback: true,
     },
     plugins: [//Aqui añadimos todos los plugins que necesitamos
         new HtmlWebPackPlugin({//Creamos una referencia al HtmlWebPackPlugin
